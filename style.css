@@ -106,6 +106,7 @@ abbr {
   font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma,
     sans-serif;
   text-transform: lowercase;
+  text-decoration: none;
 }
 
 ::selection {}
@@ -136,18 +137,42 @@ header h2 {
 
 header abbr {
   text-transform: uppercase;
-  text-decoration: none;
 }
 
-.summary {}
+.summary {
+  color: #f6f4ec;
+  background-color: #9bc152;
+  text-align: center;
+  padding: 1.5em 6%;
+}
 
-.summary p {}
+.summary p {
+  font-size: 1.333em;
+  max-width: 44rem;
+  margin: 0 auto;
+  line-height: 1.4;
+  font-style: italic;
+}
 
-.summary p+p {}
+.summary p+p {
+  text-indent: 0;
+  font-style: normal;
+  font-size: 1em;
+  margin-top: 0.2em;
+  color: #708647;
+}
 
-.summary a {}
+.summary a {
+  font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+  color: #708647;
+  border-bottom: 1px solid #708647;
+  transition: 0.3s;
+}
 
-.summary a:hover {}
+.summary a:hover {
+  color: #f6f4ec;
+  border-bottom: 1px solid #f6f4ec;
+}
 
 .preamble,
 .requirements {}
