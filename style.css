@@ -46,7 +46,7 @@ p {
   margin: 0;
 }
 
-p + p {
+p+p {
   text-indent: 1.5em;
 }
 
@@ -107,8 +107,7 @@ abbr {
   text-decoration: none;
 }
 
-::selection {
-}
+::selection {}
 
 /* Specific Styles */
 
@@ -151,7 +150,7 @@ header abbr {
   font-style: italic;
 }
 
-.summary p + p {
+.summary p+p {
   text-indent: 0;
   font-style: normal;
   font-size: 1em;
@@ -201,12 +200,21 @@ header abbr {
 }
 
 .requirements p:last-of-type {
+  max-width: 92%;
+  text-align: center;
+  font-style: italic;
+  text-align: center;
+  padding-top: 4em;
+  color: #6d6f81;
 }
 
 .requirements p:last-of-type a {
+  color: #9bc152;
+  border-bottom: none;
 }
 
 .requirements p:last-of-type a:hover {
+  color: #f6f4ec;
 }
 
 .benefits {
@@ -274,208 +282,220 @@ header abbr {
 }
 
 footer {
+  background-color: #9bc152;
 }
 
 footer:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 footer a {
+  float: left;
+  box-sizing: border-box;
+  width: 20%;
+  text-align: center;
+  background-color: #9bc152;
+  padding: 1em 0;
+  color: #f6f4ec;
+  letter-spacing: 0.05em;
+  transition: 0.2s;
 }
 
 footer a:nth-of-type(even) {
+  background: #81a53d;
 }
 
 footer a:hover {
+  background: #f6f4ec;
+  color: #9bc152;
 }
 
 aside {
+  width: 100%;
 }
 
 .sidebar {
+  background: #1b1b21;
+  color: #47495d;
+  padding: 4em 0;
+  text-align: center;
 }
 
 .design-selection {
+  float: left;
+  width: 60%;
+  font-style: italic;
+  box-sizing: border-box;
+  border-right: 1px solid #47495d;
 }
 
 .design-archives,
 .zen-resources {
+  display: inline-block;
+  width: 40%;
 }
 
 .sidebar h3 {
+  font-size: .75em;
+  margin: 0;
+  line-height: 1.6;
+  padding: 0.5em 4%;
+  color: #6b6d85;
 }
 
 .sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar li {
+  padding: 0.3em 2%;
 }
 
 .sidebar a {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", Verdana, Tahoma, sans-serif;
+  font-style: normal;
+  color: #9bc152;
+  letter-spacing: 0.06em;
+  transition: 0.2s;
 }
 
 .sidebar a:hover {
+  color: #f6f4ec;
 }
 
 .design-selection a:nth-of-type(even) {
+  font-family: "Alegreya Sans", Verdana, Tahoma, sans-serif;
+  letter-spacing: 0;
+  color: #f6f4ec;
+  transition: 0.2s;
 }
 
 .sidebar a:hover:nth-of-type(even) {
+  color: #47495d;
 }
 
 .zen-resources h3 {
+  padding-top: 0.92em;
 }
 
 .design-archives a,
 .zen-resources a {
+  color: #47495d;
 }
 
 /* Media Queries */
 
 @media (max-width: 64em) {
-  body {
-  }
+  body {}
 
-  .summary p {
-  }
+  .summary p {}
 
   .explanation h3,
   .participation h3,
   .preamble h3,
   .requirements h3,
-  .benefits h3 {
-  }
+  .benefits h3 {}
 
   .explanation p,
   .participation p,
   .preamble p,
   .requirements p,
-  .benefits p {
-  }
+  .benefits p {}
 }
 
 @media (max-width: 54em) {
-  body {
-  }
+  body {}
 
-  .summary p {
-  }
+  .summary p {}
 }
 
 @media (max-width: 47em) {
-  header h1 {
-  }
+  header h1 {}
 
-  header h2 {
-  }
+  header h2 {}
 
   .explanation,
-  .participation {
-  }
+  .participation {}
 }
 
 @media (max-width: 34em) {
-  header {
-  }
+  header {}
 
-  header h1 {
-  }
+  header h1 {}
 
-  header h2 {
-  }
+  header h2 {}
 
-  .summary p {
-  }
+  .summary p {}
 
-  .summary p + p {
-  }
+  .summary p+p {}
 
-  h3 {
-  }
+  h3 {}
 
-  .design-selection {
-  }
+  .design-selection {}
 
-  .design-selection li:last-of-type {
-  }
+  .design-selection li:last-of-type {}
 
-  .design-archives {
-  }
+  .design-archives {}
 
-  .zen-resources {
-  }
+  .zen-resources {}
 }
 
 @media (min-width: 47em) {
-  .benefits {
-  }
+  .benefits {}
 
-  .benefits h3 {
-  }
+  .benefits h3 {}
 
-  .benefits p {
-  }
+  .benefits p {}
 }
 
 @media (min-width: 54em) {
-  .benefits {
-  }
+  .benefits {}
 }
 
 @media (min-width: 64.125em) {
-  .benefits {
-  }
+  .benefits {}
 
-  aside {
-  }
+  aside {}
 
-  aside:hover {
-  }
+  aside:hover {}
 
-  aside:after {
-  }
+  aside:after {}
 
-  aside {
-  }
+  aside {}
 }
 
 @media (min-width: 94em) {
-  body {
-  }
+  body {}
 
-  .summary p {
-  }
+  .summary p {}
 
-  .benefits {
-  }
+  .benefits {}
 
   .explanation h3,
   .explanation p,
   .participation h3,
-  .participation p {
-  }
+  .participation p {}
 }
 
 @media (min-width: 120em) {
-  body {
-  }
+  body {}
 
-  .summary p {
-  }
+  .summary p {}
 
   .preamble h3,
   .preamble p,
   .requirements h3,
-  .requirements p {
-  }
+  .requirements p {}
 
   .explanation h3,
   .explanation p,
   .participation h3,
-  .participation p {
-  }
+  .participation p {}
 
-  .benefits {
-  }
+  .benefits {}
 }
 
 /* Animations */
