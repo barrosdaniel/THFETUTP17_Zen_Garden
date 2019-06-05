@@ -40,6 +40,13 @@ body {
   font-family: "Alegreya Sans", Verdana, Tahoma, sans-serif;
   font-size: 1.25em;
   line-height: 1.6;
+  font-feature-settings: "kern", "liga";
+  -moz-font-feature-settings: "kern", "liga";
+  -moz-font-feature-settings: "kern=1", "liga=1";
+  -ms-font-feature-settings: "kern", "liga";
+  -moz-font-feature-settings: "kern", "liga";
+  -webkit-font-feature-settings: "kern", "liga";
+
 }
 
 p {
@@ -89,6 +96,7 @@ li {
 
 a:link {
   text-decoration: none;
+  transition: all 0.4s ease;
 }
 
 a:visited {
@@ -114,6 +122,11 @@ abbr {
 header {
   padding: 10em 4%;
   text-align: center;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -ms-animation: fadein 2s;
+  -o-animation: fadein 2s;
 }
 
 header h1 {
@@ -162,7 +175,6 @@ header abbr {
   font-family: "Alegreya Sans SC", "Alegreya Sans", Verdana, Tahoma, sans-serif;
   color: #708647;
   border-bottom: 1px solid #708647;
-  transition: 0.3s;
 }
 
 .summary a:hover {
@@ -300,7 +312,6 @@ footer a {
   padding: 1em 0;
   color: #f6f4ec;
   letter-spacing: 0.05em;
-  transition: 0.2s;
 }
 
 footer a:nth-of-type(even) {
@@ -359,7 +370,6 @@ aside {
   font-style: normal;
   color: #9bc152;
   letter-spacing: 0.06em;
-  transition: 0.2s;
 }
 
 .sidebar a:hover {
@@ -370,7 +380,6 @@ aside {
   font-family: "Alegreya Sans", Verdana, Tahoma, sans-serif;
   letter-spacing: 0;
   color: #f6f4ec;
-  transition: 0.2s;
 }
 
 .sidebar a:hover:nth-of-type(even) {
@@ -491,19 +500,44 @@ aside {
 }
 
 @media (min-width: 47em) {
-  .benefits {}
+  .benefits {
+    position: absolute;
+    float: left;
+    background: none;
+    max-width: 7.5rem;
+    text-align: right;
+    margin-top: 12em;
+    left: 50%;
+    margin-left: -25.5rem;
+  }
 
-  .benefits h3 {}
+  .benefits h3 {
+    font-size: 1em;
+    margin: 0;
+    font-family: "Alegreya Sans SC", "Alegreya Sans", Verdana, Tahoma, sans-serif;
+    font-style: normal;
+  }
 
-  .benefits p {}
+  .benefits p {
+    font-size: 0.75em;
+    line-height: 1.4;
+  }
 }
 
 @media (min-width: 54em) {
-  .benefits {}
+  .benefits {
+    max-width: 8rem;
+    margin-top: 12.5em;
+    margin-left: -28rem;
+  }
 }
 
 @media (min-width: 64.125em) {
-  .benefits {}
+  .benefits {
+    max-width: 9.4rem;
+    margin-top: 13.1em;
+    margin-left: -34rem;
+  }
 
   aside {
     position: absolute;
@@ -533,34 +567,102 @@ aside {
 }
 
 @media (min-width: 94em) {
-  body {}
+  body {
+    font-size: 1.375em;
+  }
 
-  .summary p {}
+  .summary p {
+    max-width: 49rem;
+  }
 
-  .benefits {}
+  .benefits {
+    max-width: 12.5rem;
+    margin-left: -41rem;
+  }
 
   .explanation h3,
   .explanation p,
   .participation h3,
-  .participation p {}
+  .participation p {
+    width: 34rem;
+  }
 }
 
 @media (min-width: 120em) {
-  body {}
+  body {
+    font-size: 1.5em;
+  }
 
-  .summary p {}
+  .summary p {
+    max-width: 51rem;
+  }
 
   .preamble h3,
   .preamble p,
   .requirements h3,
-  .requirements p {}
+  .requirements p {
+    max-width: 37.5rem;
+  }
 
   .explanation h3,
   .explanation p,
   .participation h3,
-  .participation p {}
+  .participation p {
+    width: 37.5rem;
+  }
 
-  .benefits {}
+  .benefits {
+    margin-left: -49rem;
+  }
 }
 
 /* Animations */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
