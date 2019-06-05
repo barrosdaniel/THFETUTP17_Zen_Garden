@@ -59,6 +59,7 @@ h6 {
   font-family: 'Alegreya', Georgia, serif;
   font-weight: normal;
   font-style: italic;
+  color: #9bc152;
 }
 
 h1 {
@@ -112,13 +113,31 @@ abbr {
 
 /* Specific Styles */
 
-header {}
+header {
+  padding: 10em 4%;
+  text-align: center;
+}
 
-header h1 {}
 
-header h2 {}
+header h1 {
+  font-size: 6.2em;
+  font-weight: 900;
+  color: #282932;
+  margin: 0;
+}
 
-header abbr {}
+header h2 {
+  font-family: 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+  font-size: 1.777em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+header abbr {
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 .summary {}
 
